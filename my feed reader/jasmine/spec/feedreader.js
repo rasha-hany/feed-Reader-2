@@ -95,7 +95,7 @@ $(function() {
             expect(entryLength).toBeGreaterThan(0);
             done();
         }); 
-        };
+        });
                           
     /* TODO: Write a new test suite named "New Feed Selection" */
        describe('The New Feed Selection', function() { 
