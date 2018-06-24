@@ -21,7 +21,7 @@ $(function() {
          * allFeeds in app.js to be an empty array and refresh the
          * page?
          */
-        it('are defined', function() {
+        it(' Feeds are defined', function() {
             expect(allFeeds).toBeDefined();
             expect(allFeeds.length).not.toBe(0);
         });
@@ -32,8 +32,11 @@ $(function() {
          * and that the URL is not empty.
          */
       it('URL is defined', function() {
-            expect(allFeeds.url).toBeDefined();
-            expect(allFeeds.url.length).not.toBeEmpty();
+           for (var i = 0; i< allFeeds.lenght; i++){
+               expect(allFeeds[i].url).toBeDefined();
+            expect(allFeeds[i].url.length).not.toBe(0);
+           };
+                
         });
 
         /* TODO: Write a test that loops through each feed
@@ -42,11 +45,12 @@ $(function() {
          */
         
         it('Name is defined', function() {
-           allFeeds.forEach(function(feed) {
-                expect(feed.url).toBeDefined();
-            });
+          for (var i = 0; i< allFeeds.lenght; i++)
+               
+            expect(allFeeds[i].name).toBeDefined();
+            expect(allFeeds[i].name.length).not.toBe(0);
+        });  
     });
-});
 
     /* TODO: Write a new test suite named "The menu" */
     
@@ -59,7 +63,7 @@ $(function() {
          * hiding/showing of the menu element.
          */
               it('Menu is hidden by default', function() {
-                expect($('body').hasClass('menu.hidden')).toBe(true);
+                expect($('body').hasClass('menu.hidden')).toEqual(false);
         });
         
          /* TODO: Write a test that ensures the menu changes
@@ -68,10 +72,10 @@ $(function() {
           * clicked and does it hide when clicked again.
           */
             it('working toggle on click event', function(){
-            $('menu.icon.link').tigger('click');
-            expect($('body').hasClass('menu.hidden')).toBe(false);
-           $('menu.icon.link').tigger('click'); 
-             expect($('body').hasClass('menu.hidden')).toBe(true);
+            $('.menu-icon-link').trigger('click');
+            expect($('body').hasClass('menu-hidden')).toBe(false);
+           $('.menu-icon-link').trigger('click'); 
+             expect($('body').hasClass('menu-hidden')).toBe(true);
         });
  });
     
@@ -94,7 +98,7 @@ $(function() {
             var entryLength = $('.feed .entry').length;
             expect(entryLength).toBeGreaterThan(0);
             done();
-        }); 
+        });
         });
                           
     /* TODO: Write a new test suite named "New Feed Selection" */
@@ -122,4 +126,5 @@ $(function() {
         });
     });
 
-}());
+});
+
