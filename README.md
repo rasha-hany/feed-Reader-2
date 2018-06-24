@@ -1,12 +1,11 @@
-# feed-Reader-2
-Project Description 
 
+Project Description 
 This app is read with RSS feed by Udacity
 We ues [Jasmine](https://jasmine.github.io/)to check the functionalites of the code written.
 
-The Online page for the project 
+The page for the project 
 
-https://github.com/rasha-hany/New-Arcade-2
+https://github.com/rasha-hany/feed-Reader-2/tree/master/my%20feed%20reader
 
 How to run the application
 
